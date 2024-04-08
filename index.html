@@ -5,17 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <script src="scripts.js"></script>
-    <title>Document</title>
+    <title>Website Consultório</title>
 </head>
 <body>
     <h1>Website Consultório</h1>
     <h2>Cortesia de:</h2>
     <h3>Daniel Soares, Gabriel Brunelli e Miguel Pereira</h3>
 
-    <form name="myForm" action="index.html" onsubmit="return validateForm()" method="post">
-        Name: <input type="text" name="fname">
-        <input type="submit" value="Submit">
-      </form>
+    <article><h2>Selecione de acordo com seus sintomas</h2><br>
+        <select style="height:24px;font-size:12pt;" name="genero" 
+        id="genero" 
+        onChange="qualGeneroUser()" 
+        class="form-control" 
+        form="genero">
+        <option value="qualGenero" checked>Qual seu gênero biológico</option>
+        <option value="homem">Homem</option>
+        <option value="mulher">Mulher</option>
+      </select>
+
+      <div class="text" id="temFeridaHomem" style="display:none; margin-top: 2%;">
+
+            <select style="height:24px;font-size:12pt;" name="temFerida" 
+            id="temFerida" 
+            onChange="temFeridaH()" 
+            class="form-control" 
+            form="temFerida">
+            <option value="temFerH" checked>Tem ferida</option>
+            <option value="temFeridaNão">Não</option>
+            <option value="temFeridaSim">Sim</option>
+          </select>
+          <br><br>
+          
+          </div>
+        
+          <div class="text" id="temPusH" style="display:none; margin-top: 2%;">
+            <h1>Banana</h1>
+            </div>
+        
+            <div class="text" id="estaBemH" style="display:none; margin-top: 2%;">
+                <h1>Você está bem!</h1>
+  
+  
+  </div>
+  
+  <div class="text" id="temFeridaMulher" style="display:none; margin-top: 2%;">
+    <select style="height:24px;font-size:12pt;" name="temFeridaM" 
+    id="temFeridaM" 
+    onChange="temFerida()" 
+    class="form-control" 
+    form="temFeridaM">
+    <option value="temFerM" checked>Tem ferida</option>
+    <option value="temFeridaNão">Não</option>
+    <option value="temFeridaSim">Sim</option>
+  </select>
+  <br><br>
+  
+  </div>
+
+  <div class="text" id="temPus" style="display:none; margin-top: 2%;">
+    <h1>Banana</h1>
+    </div>
+
+    <div class="text" id="estaBem" style="display:none; margin-top: 2%;">
+        <h1>Você está bem!</h1>
+        </div>
+
+    </article>
+
+
 
 </body>
 </html>
