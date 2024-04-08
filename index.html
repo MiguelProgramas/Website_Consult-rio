@@ -37,10 +37,7 @@
           <br><br>
           
           </div>
-        
-          <div class="text" id="temPusH" style="display:none; margin-top: 2%;">
-            <h1>Banana</h1>
-            </div>
+      
         
             <div class="text" id="estaBemH" style="display:none; margin-top: 2%;">
                 <h1>Você está bem!</h1>
@@ -70,7 +67,29 @@
         <h1>Você está bem!</h1>
         </div>
 
+        <div class="text" id="imunidadeBaixa" style="display:none; margin-top: 2%;">
+
+          <select style="height:24px;font-size:12pt;" name="temImunidade" 
+          id="temImunidade" 
+          onChange="temImunidadeBaixa()" 
+          class="form-control" 
+          form="temImunidade">
+          <option value="temImunidade" checked>Tem imunidade baixa</option>
+          <option value="temImunidadeNão">Não</option>
+          <option value="temImunidadeSim">Sim</option>
+        </select>
+        <br><br>
+        
+        </div>
+
+        <div class="text" id="aids" style="display:none; margin-top: 2%;">
+          <h1>Você tem AIDS!</h1>
+        </div>
+        
+
     </article>
+
+    
 
 
 

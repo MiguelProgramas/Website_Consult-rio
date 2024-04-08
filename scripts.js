@@ -36,15 +36,31 @@ function temFerida(){
   function temFeridaH(){
     getValue = document.getElementById("temFerida").value;
     if(getValue == "temFeridaNão"){
-    document.getElementById("temPus").style.display = "block";
+    document.getElementById("imunidadeBaixa").style.display = "block";
     document.getElementById("estaBem").style.display = "none";
     }
     if(getValue == "temFeridaSim"){
-    document.getElementById("temPus").style.display = "none";
+    document.getElementById("imunidadeBaixa").style.display = "none";
     document.getElementById("estaBem").style.display = "block";
     }
     if(getValue == "temFerH"){
-      document.getElementById("temPus").style.display = "none";
+      document.getElementById("imunidadeBaixa").style.display = "none";
       document.getElementById("estaBem").style.display = "none";
       }
     } 
+
+    function temImunidadeBaixa(){
+      getValue = document.getElementById("temFerida").value;
+      if(getValue == "temImunidadeSim"){
+      document.getElementById("aids").style.display = "block";
+      document.getElementById("estaBem").style.display = "none";
+      }
+      if(getValue == "temImunidadeNão"){
+      document.getElementById("aids").style.display = "none";
+      document.getElementById("estaBem").style.display = "block";
+      }
+      if(getValue == "temImunidade"){
+        document.getElementById("aids").style.display = "none";
+        document.getElementById("estaBem").style.display = "none";
+        }
+      } 
