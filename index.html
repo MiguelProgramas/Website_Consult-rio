@@ -1,78 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
     <script src="scripts.js"></script>
     <title>Website Consultório</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Website Consultório</h1>
     <h2>Cortesia de:</h2>
     <h3>Daniel Soares, Gabriel Brunelli e Miguel Pereira</h3>
 
-    <article><h2>Selecione de acordo com seus sintomas</h2><br>
-        <select style="height:24px;font-size:12pt;" name="genero" 
-        id="genero" 
-        onChange="qualGeneroUser()" 
-        class="form-control" 
-        form="genero">
+    <article>
+      <h2>Selecione de acordo com seus sintomas</h2>
+      <br>
+      <select
+        style="height: 24px; font-size: 12pt"
+        name="genero"
+        id="genero"
+        onChange="qualGeneroUser()"
+        class="form-control"
+        form="genero"
+      >
         <option value="qualGenero" checked>Qual seu gênero biológico</option>
         <option value="homem">Homem</option>
         <option value="mulher">Mulher</option>
       </select>
 
-      <div class="text" id="temFeridaHomem" style="display:none; margin-top: 2%;">
+      <div
+        class="text"
+        id="temFeridaHomem"
+        style="display: none; margin-top: 2%"
+      >
+        <select
+          style="height: 24px; font-size: 12pt"
+          name="temFerida"
+          id="temFerida"
+          onChange="temFeridaH()"
+          class="form-control"
+          form="temFerida"
+        >
+          <option value="temFerH" checked>Tem ferida</option>
+          <option value="temFeridaNão">Não</option>
+          <option value="temFeridaSim">Sim</option>
+        </select>
+        <br>
+      </div>
 
-            <select style="height:24px;font-size:12pt;" name="temFerida" 
-            id="temFerida" 
-            onChange="temFeridaH()" 
-            class="form-control" 
-            form="temFerida">
-            <option value="temFerH" checked>Tem ferida</option>
-            <option value="temFeridaNão">Não</option>
-            <option value="temFeridaSim">Sim</option>
-          </select>
-          <br><br>
-          
-          </div>
-        
-          <div class="text" id="temPusH" style="display:none; margin-top: 2%;">
-            <h1>Banana</h1>
-            </div>
-        
-            <div class="text" id="estaBemH" style="display:none; margin-top: 2%;">
-                <h1>Você está bem!</h1>
-  
-  
-  </div>
-  
-  <div class="text" id="temFeridaMulher" style="display:none; margin-top: 2%;">
-    <select style="height:24px;font-size:12pt;" name="temFeridaM" 
-    id="temFeridaM" 
-    onChange="temFerida()" 
-    class="form-control" 
-    form="temFeridaM">
-    <option value="temFerM" checked>Tem ferida</option>
-    <option value="temFeridaNão">Não</option>
-    <option value="temFeridaSim">Sim</option>
-  </select>
-  <br><br>
-  
-  </div>
+      <div
+        class="text"
+        id="temFeridaMulher"
+        style="display: none; margin-top: 2%"
+      >
+        <select
+          style="height: 24px; font-size: 12pt"
+          name="temFeridaM"
+          id="temFeridaM"
+          onChange="temFerida()"
+          class="form-control"
+          form="temFeridaM"
+        >
+          <option value="temFerM" checked>Tem ferida</option>
+          <option value="temFeridaNão">Não</option>
+          <option value="temFeridaSim">Sim</option>
+        </select>
+        <br>
+      </div>
 
-  <div class="text" id="temPus" style="display:none; margin-top: 2%;">
-    <h1>Banana</h1>
+      <div
+        class="text"
+        id="tipoFerida"
+        style="display: none; margin-top: 2%"
+      >
+        <select
+          style="height: 24px; font-size: 12pt"
+          name="tipoFerida"
+          id="tipoFerida"
+          onChange="tipoDeFerida()"
+          class="form-control"
+          form="tipoFerida"
+        >
+          <option value="tipo0" checked>Qual tipo de ferida</option>
+          <option value="tipo1">Com pus e com cavidade</option>
+          <option value="tipo2">Sem pus e com cavidade</option>
+          <option value="tipo3">Com pus e sem cavidade</option>
+          <option value="tipo4">Sem pus e sem cavidade</option>
+        </select>
+        <br>
+      </div>
+
+
+
+      <div
+      class="text"
+      id="dorCabeca"
+      style="display: none; margin-top: 2%"
+    >
+      <select
+        style="height: 24px; font-size: 12pt"
+        name="dorCabecaa"
+        id="dorCabecaa"
+        onChange="dorDeCabeca()"
+        class="form-control"
+        form="dorCabecaa"
+      >
+        <option value="cabe" checked>Possui dor de cabeça</option>
+        <option value="cuda">Não</option>
+        <option value="doido">Sim</option>
+      </select>
+      <br>
     </div>
 
-    <div class="text" id="estaBem" style="display:none; margin-top: 2%;">
-        <h1>Você está bem!</h1>
-        </div>
+
+      <div class="text" id="aids" style="display: none; margin-top: 2%">
+        <h1>Você possivelmente adquiriu aids</h1>
+        <img src="tennis.jpg" alt="aids shoes">
+      </div>
+
+      <div class="text" id="naids" style="display: none; margin-top: 2%">
+        <h1>Você pode não possuir aids</h1>
+        <img src="nice shoes.jpg" alt="nike shoes">
+      </div>
 
     </article>
-
-
-
-</body>
+  </body>
 </html>

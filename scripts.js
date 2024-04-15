@@ -20,31 +20,47 @@ document.getElementById("qualGenero").style.display = "none";
 function temFerida(){
   getValue = document.getElementById("temFeridaM").value;
   if(getValue == "temFeridaNão"){
-  document.getElementById("temPus").style.display = "block";
-  document.getElementById("estaBem").style.display = "none";
+  document.getElementById("dorCabeca").style.display = "block";
+  document.getElementById("tipoFerida").style.display = "none";
   }
   if(getValue == "temFeridaSim"){
-  document.getElementById("temPus").style.display = "none";
-  document.getElementById("estaBem").style.display = "block";
+  document.getElementById("dorCabeca").style.display = "none";
+  document.getElementById("tipoFerida").style.display = "block";
   }
   if(getValue == "temFerM"){
-    document.getElementById("temPus").style.display = "none";
-    document.getElementById("estaBem").style.display = "none";
+    document.getElementById("dorCabeca").style.display = "none";
+    document.getElementById("tipoFerida").style.display = "none";
     }
   } 
 
   function temFeridaH(){
     getValue = document.getElementById("temFerida").value;
     if(getValue == "temFeridaNão"){
-    document.getElementById("temPus").style.display = "block";
-    document.getElementById("estaBem").style.display = "none";
+    document.getElementById("dorCabeca").style.display = "block";
+    document.getElementById("tipoFerida").style.display = "none";
     }
     if(getValue == "temFeridaSim"){
-    document.getElementById("temPus").style.display = "none";
-    document.getElementById("estaBem").style.display = "block";
+    document.getElementById("dorCabeca").style.display = "none";
+    document.getElementById("tipoFerida").style.display = "block";
     }
     if(getValue == "temFerH"){
-      document.getElementById("temPus").style.display = "none";
-      document.getElementById("estaBem").style.display = "none";
+      document.getElementById("dorCabeca").style.display = "none";
+      document.getElementById("tipoFerida").style.display = "none";
       }
     } 
+
+    function dorDeCabeca(){
+      getValue = document.getElementById("dorCabecaa").value;
+      if(getValue == "doido"){
+      document.getElementById("aids").style.display = "block";
+      document.getElementById("naids").style.display = "none";
+      }
+      if(getValue == "cuda"){
+      document.getElementById("aids").style.display = "none";
+      document.getElementById("naids").style.display = "block";
+      }
+      if(getValue == "cabe"){
+        document.getElementById("aids").style.display = "none";
+        document.getElementById("naids").style.display = "none";
+        }
+      } 
