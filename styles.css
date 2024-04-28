@@ -2,9 +2,24 @@ h1, h2, h3 {
     text-align: center;
 }
 
+
 article {
     display: block;
     border: 1px solid black;
     padding: 1px;
     margin: 50px;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.escolhido {
+    display: block;
+}
+
+.naoEscolhido {
+    display: none;
 }

@@ -12,63 +12,59 @@
     <h2>Cortesia de:</h2>
     <h3>Daniel Soares, Gabriel Brunelli e Miguel Pereira</h3>
 
-    <article><h2>Selecione de acordo com seus sintomas</h2><br>
-        <select style="height:24px;font-size:12pt;" name="genero" 
-        id="genero" 
-        onChange="qualGeneroUser()" 
-        class="form-control" 
-        form="genero">
-        <option value="qualGenero" checked>Qual seu gênero biológico</option>
-        <option value="homem">Homem</option>
-        <option value="mulher">Mulher</option>
-      </select>
+    <article>
+      
+      <h1>Selecione, de acordo com seus sintomas, as respostas para as perguntas a seguir</h1><br>
 
-      <div class="text" id="temFeridaHomem" style="display:none; margin-top: 2%;">
+      <form>
+        <h3>Qual seu gênero biológico?</h3>
+        <label>Homem</label>
+        <input type="radio" name="genero" onclick="pergunta2()"><br>
+        <label>Mulher</label>
+        <input type="radio" name="genero" onclick="pergunta2()"><br>
+      </form>
 
-            <select style="height:24px;font-size:12pt;" name="temFerida" 
-            id="temFerida" 
-            onChange="temFeridaH()" 
-            class="form-control" 
-            form="temFerida">
-            <option value="temFerH" checked>Tem ferida</option>
-            <option value="temFeridaNão">Não</option>
-            <option value="temFeridaSim">Sim</option>
-          </select>
-          <br><br>
-          
-          </div>
-        
-          <div class="text" id="temPusH" style="display:none; margin-top: 2%;">
-            <h1>Banana</h1>
-            </div>
-        
-            <div class="text" id="estaBemH" style="display:none; margin-top: 2%;">
-                <h1>Você está bem!</h1>
-  
-  
-  </div>
-  
-  <div class="text" id="temFeridaMulher" style="display:none; margin-top: 2%;">
-    <select style="height:24px;font-size:12pt;" name="temFeridaM" 
-    id="temFeridaM" 
-    onChange="temFerida()" 
-    class="form-control" 
-    form="temFeridaM">
-    <option value="temFerM" checked>Tem ferida</option>
-    <option value="temFeridaNão">Não</option>
-    <option value="temFeridaSim">Sim</option>
-  </select>
-  <br><br>
-  
-  </div>
+     <div id="pergunta2" style="display:none">
+      <form>
+        <h3>Você possui feridas?</h3>
+        <label>Sim</label>
+        <input type="radio" name="ferida" onclick="pergunta3()"><br>
+        <label>Não</label>
+        <input type="radio" name="ferida" onclick="pergunta4()"><br>
+      </form>
+     </div>
+    
+     <div id="destrinchar1">
+      <div id="pergunta3" style="display:none">
+        <form>
+          <h3>Qual tipo de ferida?</h3>
+          <label>Com pus e com cavidade</label>
+          <input type="radio" name="tipo" onclick="pergunta5()"><br>
+          <label>Sem pus e com cavidade</label>
+          <input type="radio" name="tipo" onclick="pergunta5()"><br>
+          <label>Com pus e sem cavidade</label>
+          <input type="radio" name="tipo" onclick="pergunta5()"><br>
+          <label>Sem pus e sem cavidade</label>
+          <input type="radio" name="tipo" onclick="pergunta5()"><br>
+        </form>
+       </div>
+     </div>
 
-  <div class="text" id="temPus" style="display:none; margin-top: 2%;">
-    <h1>Banana</h1>
-    </div>
-
-    <div class="text" id="estaBem" style="display:none; margin-top: 2%;">
-        <h1>Você está bem!</h1>
-        </div>
+     <div id="destrinchar2">
+      <div id="pergunta4" style="display:none">
+        <form method="POST">
+          <h3>Você possui dor de cabeça?</h3>
+          <label>Sim</label>
+          <input type="radio" name="cabeca" onclick="apagarMensagem()"><br>
+          <label>Não</label>
+          <input type="radio" name="cabeca" onclick="apagarMensagem()"><br>
+  
+          <div id="mensagem"></div>
+  
+          <input type="submit" value="Enviar" onclick="return conclusao()">
+        </form>
+       </div>
+     </div>
 
     </article>
 

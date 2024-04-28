@@ -1,50 +1,34 @@
-function qualGeneroUser(){
-getValue = document.getElementById("genero").value;
-if(getValue == "homem"){
-document.getElementById("temFeridaHomem").style.display = "block";
-document.getElementById("temFeridaMulher").style.display = "none";
-document.getElementById("qualGenero").style.display = "none";
+function pergunta2() {
+  document.getElementById("pergunta2").style.display = "block";
 }
-if(getValue == "mulher"){
-document.getElementById("temFeridaHomem").style.display = "none";
-document.getElementById("temFeridaMulher").style.display = "block";
-document.getElementById("qualGenero").style.display = "none";
-}
-if(getValue == "qualGenero"){
-document.getElementById("temFeridaHomem").style.display = "none";
-document.getElementById("temFeridaMulher").style.display = "none";
-document.getElementById("qualGenero").style.display = "none";
-}
-} 
 
-function temFerida(){
-  getValue = document.getElementById("temFeridaM").value;
-  if(getValue == "temFeridaNão"){
-  document.getElementById("temPus").style.display = "block";
-  document.getElementById("estaBem").style.display = "none";
-  }
-  if(getValue == "temFeridaSim"){
-  document.getElementById("temPus").style.display = "none";
-  document.getElementById("estaBem").style.display = "block";
-  }
-  if(getValue == "temFerM"){
-    document.getElementById("temPus").style.display = "none";
-    document.getElementById("estaBem").style.display = "none";
-    }
-  } 
+function pergunta3() {
+  document.getElementById("pergunta3").style.display = "block";
+}
 
-  function temFeridaH(){
-    getValue = document.getElementById("temFerida").value;
-    if(getValue == "temFeridaNão"){
-    document.getElementById("temPus").style.display = "block";
-    document.getElementById("estaBem").style.display = "none";
-    }
-    if(getValue == "temFeridaSim"){
-    document.getElementById("temPus").style.display = "none";
-    document.getElementById("estaBem").style.display = "block";
-    }
-    if(getValue == "temFerH"){
-      document.getElementById("temPus").style.display = "none";
-      document.getElementById("estaBem").style.display = "none";
-      }
-    } 
+function pergunta4() {
+  document.getElementById("pergunta4").style.display = "block";
+}
+
+function conclusao() {
+
+  let resposta = document.getElementsByName("cabeca");
+
+  if (resposta[0].checked == true) {
+    alert("Você possui AIDS.");
+  }
+  else if (resposta[1].checked == true) {
+    alert("Você não possui AIDS.")
+  }
+  else {
+    var message = '<h4 style="color:red;">Você precisa selecionar uma última opção antes de prosseguir!</h4>';
+    document.getElementById("mensagem").innerHTML = message;
+
+    return false;
+  }
+  return true;
+}
+
+function apagarMensagem() {
+  document.getElementById("mensagem").innerHTML = "";
+}
