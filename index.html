@@ -33,8 +33,21 @@
         <input type="radio" name="ferida" onclick="pergunta4()"><br>
       </form>
      </div>
+
+     <div id="pergunta6" style="display:none">
+      <form>
+        <h3>Tem dores abdominais e corrimento vaginal?</h3>
+        <label>Sim</label>
+        <input type="radio" name="abdominal" onclick="apagarMensagem()"><br>
+        <label>Não</label>
+        <input type="radio" name="abdominal" onclick="apagarMensagem()"><br>
+
+        <div id="mensagem"></div>
+
+        <input type="submit" value="Enviar" onclick="return conclusao2()">
+      </form>
+     </div>
     
-     <div id="destrinchar1">
       <div id="pergunta3" style="display:none">
         <form>
           <h3>Qual tipo de ferida?</h3>
@@ -48,9 +61,7 @@
           <input type="radio" name="tipo" onclick="pergunta5()"><br>
         </form>
        </div>
-     </div>
 
-     <div id="destrinchar2">
       <div id="pergunta4" style="display:none">
         <form method="POST">
           <h3>Você possui dor de cabeça?</h3>
@@ -64,7 +75,7 @@
           <input type="submit" value="Enviar" onclick="return conclusao()">
         </form>
        </div>
-     </div>
+
 
     </article>
 
