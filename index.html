@@ -19,18 +19,18 @@
       <form>
         <h3>Qual seu gênero biológico?</h3>
         <label>Homem</label>
-        <input type="radio" name="genero" onclick="pergunta2()"><br>
+        <input type="radio" name="genero" onclick="respGenero()"><br>
         <label>Mulher</label>
-        <input type="radio" name="genero" onclick="pergunta2()"><br>
+        <input type="radio" name="genero" onclick="respGenero()"><br>
       </form>
 
      <div id="pergunta2" style="display:none">
       <form>
         <h3>Você possui feridas?</h3>
         <label>Sim</label>
-        <input type="radio" name="ferida" onclick="pergunta3()"><br>
+        <input type="radio" name="ferida" onclick="respFerida1()"><br>
         <label>Não</label>
-        <input type="radio" name="ferida" onclick="pergunta4()"><br>
+        <input type="radio" name="ferida" onclick="respFerida2()"><br>
       </form>
      </div>
 
@@ -38,15 +38,32 @@
       <form>
         <h3>Tem dores abdominais e corrimento vaginal?</h3>
         <label>Sim</label>
-        <input type="radio" name="abdominal" onclick="apagarMensagem()"><br>
+        <input type="radio" name="abdominal" onclick="respAbd1()"><br>
         <label>Não</label>
-        <input type="radio" name="abdominal" onclick="apagarMensagem()"><br>
-
-        <div id="mensagem"></div>
-
-        <input type="submit" value="Enviar" onclick="return conclusao2()">
+        <input type="radio" name="abdominal" onclick="respAbd2()"><br>
       </form>
      </div>
+
+     <div id="pergunta7" style="display:none">
+      <form>
+      <h3>Tem tido mais vontade de urinar recentemente?</h3>
+      <label>Sim</label>
+      <input type="radio" name="pergunta7" onclick="respUrin()"><br>
+      <label>Não</label>
+      <input type="radio" name="pergunta7" onclick="respUrin()"><br>
+      </form>
+
+      <div id="pergunta8" style="display:none">
+        <form>
+        <h3>Tem tido dor ao urinar recentemente?</h3>
+        <label>Sim</label>
+        <input type="radio" name="pergunta8" onclick="respDor()"><br>
+        <label>Não</label>
+        <input type="radio" name="pergunta8" onclick="respDor()"><br>
+        </form>
+      </div>
+
+   </div>
     
       <div id="pergunta3" style="display:none">
         <form>
