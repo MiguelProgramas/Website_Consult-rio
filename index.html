@@ -8,9 +8,11 @@
     <title>Website Consultório</title>
 </head>
 <body>
+  <image src="sesi.jpg" alt="Logo do SESI" style="display: block; margin-left: auto; margin-right: auto;"></image>
     <h1>Website Consultório</h1>
     <h2>Cortesia de:</h2>
     <h3>Daniel Soares, Gabriel Brunelli e Miguel Pereira</h3>
+
 
     <article>
       
@@ -34,13 +36,23 @@
       </form>
      </div>
 
+     <div id="pergunta11" style="display:none">
+      <form>
+        <h3>Você tem tido ardência na região genital?</h3>
+        <label>Sim</label>
+        <input type="radio" name="pergunta10" onclick="respFerida2()"><br>
+        <label>Não</label>
+        <input type="radio" name="pergunta10" onclick="respFerida2()"><br>
+      </form>
+     </div>
+
      <div id="pergunta6" style="display:none">
       <form>
         <h3>Tem dores abdominais e corrimento vaginal?</h3>
         <label>Sim</label>
         <input type="radio" name="abdominal" onclick="respAbd1()"><br>
         <label>Não</label>
-        <input type="radio" name="abdominal" onclick="respAbd2()"><br>
+        <input type="radio" name="abdominal" onclick="respAbd1()"><br>
       </form>
      </div>
 
@@ -52,6 +64,7 @@
       <label>Não</label>
       <input type="radio" name="pergunta7" onclick="respUrin()"><br>
       </form>
+     </div>
 
       <div id="pergunta8" style="display:none">
         <form>
@@ -63,33 +76,36 @@
         </form>
       </div>
 
-   </div>
-    
-      <div id="pergunta3" style="display:none">
+      <div id="pergunta9" style="display:none">
         <form>
-          <h3>Qual tipo de ferida?</h3>
-          <label>Com pus e com cavidade</label>
-          <input type="radio" name="tipo" onclick="pergunta5()"><br>
-          <label>Sem pus e com cavidade</label>
-          <input type="radio" name="tipo" onclick="pergunta5()"><br>
-          <label>Com pus e sem cavidade</label>
-          <input type="radio" name="tipo" onclick="pergunta5()"><br>
-          <label>Sem pus e sem cavidade</label>
-          <input type="radio" name="tipo" onclick="pergunta5()"><br>
+        <h3>Tem alguma verruga?</h3>
+        <label>Sim</label>
+        <input type="radio" name="pergunta9" onclick="respVer()"><br>
+        <label>Não</label>
+        <input type="radio" name="pergunta9" onclick="respVer()"><br>
         </form>
-       </div>
+      </div>
+
+   
 
       <div id="pergunta4" style="display:none">
-        <form method="POST">
+        <form>
           <h3>Você possui dor de cabeça?</h3>
           <label>Sim</label>
-          <input type="radio" name="cabeca" onclick="apagarMensagem()"><br>
+          <input type="radio" name="pergunta4" onclick="respCab()"><br>
           <label>Não</label>
-          <input type="radio" name="cabeca" onclick="apagarMensagem()"><br>
-  
-          <div id="mensagem"></div>
-  
-          <input type="submit" value="Enviar" onclick="return conclusao()">
+          <input type="radio" name="pergunta4" onclick="respCab()"><br>
+        </form>
+       </div>
+       
+
+       <div id="pergunta10" style="display:none">
+        <form>
+          <h3>Você tem tido ardência na região genital?</h3>
+          <label>Sim</label>
+          <input type="radio" name="pergunta10" onclick="respVer()"><br>
+          <label>Não</label>
+          <input type="radio" name="pergunta10" onclick="respVer()"><br>
         </form>
        </div>
 

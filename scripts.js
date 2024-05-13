@@ -3,11 +3,11 @@ function respGenero() {
 }
 
 function respFerida1() {
-  document.getElementById("pergunta3").style.display = "block";
+  document.getElementById("pergunta11").style.display = "block";
 }
 
 function respFerida2() {
-  document.getElementById("pergunta3").style.display = "block";
+  document.getElementById("pergunta6").style.display = "block";
 }
 
 function conclusao() {
@@ -36,6 +36,20 @@ function respAbd1() {
 function respUrin(){
   document.getElementById("pergunta8").style.display = "block";
 }
+
+function respDor(){
+  document.getElementById("pergunta9").style.display = "block";
+}
+
+function respVer(){
+  document.getElementById("pergunta4").style.display = "block";
+}
+
+function respCab(){
+    document.getElementById("pergunta10").style.display = "block";
+}
+
+
 
 
 function apagarMensagem() {
