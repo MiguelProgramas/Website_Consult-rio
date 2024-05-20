@@ -2,11 +2,7 @@ function respGenero() {
   document.getElementById("pergunta2").style.display = "block";
 }
 
-function respFerida1() {
-  document.getElementById("pergunta11").style.display = "block";
-}
-
-function respFerida2() {
+function respFerida() {
   document.getElementById("pergunta6").style.display = "block";
 }
 
@@ -47,6 +43,10 @@ function respVer(){
 
 function respCab(){
     document.getElementById("pergunta10").style.display = "block";
+}
+
+function respArd(){
+  document.getElementById("pergunta11").style.display = "block";
 }
 
 
