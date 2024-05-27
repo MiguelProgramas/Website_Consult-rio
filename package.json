@@ -1,0 +1,19 @@
+{
+  "name": "website_consultorio",
+  "version": "1.0.0",
+  "description": "Um projeto do T.A. de Iniciação Científica para servir como projeto final e pessoal.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./index.js localhost 3000"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "express-handlebars": "^7.1.2",
+    "handlebars": "^4.7.8",
+    "nodemon": "^3.1.1"
+  }
+}
