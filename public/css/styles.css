@@ -184,3 +184,16 @@ p {
 #qrcode-container h2 {
     max-height: 35px;
 }
+
+#mensagem {
+    padding: 1.5em;
+    color: #222;
+    background-color: rgb(252, 231, 206);
+    border-radius: 5px;
+    margin: 0 auto 2em;
+    text-align: center;
+    max-width: 60%;
+    font-weight: bold;
+    font-size: larger;
+    box-shadow: 10px 10px 10px red;
+}
