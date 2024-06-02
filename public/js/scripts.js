@@ -42,25 +42,6 @@ function respTipoFeri() {
   document.getElementById("finalizacao").style.display = "block";
 }
 
-function conclusao() {
-
-  let resposta = document.getElementsByName("cabeca");
-
-  if (resposta[0].checked == true) {
-    alert("Você possui AIDS.");
-  }
-  else if (resposta[1].checked == true) {
-    alert("Você não possui AIDS.")
-  }
-  else {
-    var message = '<h4 style="color:red;">Você precisa selecionar uma última opção antes de prosseguir!</h4>';
-    document.getElementById("mensagem").innerHTML = message;
-
-    return false;
-  }
-  return true;
-}
-
 function final() {
   let resposta2 = document.getElementsByName("dorAbdominal");
   let resposta3 = document.getElementsByName("vontadeUrin");
@@ -69,28 +50,37 @@ function final() {
   let resposta7 = document.getElementsByName("sangUrin");
   let resposta9 = document.getElementsByName("tipoFeri");
 
-  if (resposta9[2].checked == true || resposta9[0].checked == true) {
-    alert("O seu hipotético diagnóstico é: Danovanose");
+  let diagnosticos = { };
+
+  if (resposta9[2].checked == true) {
+    diagnosticos.Danovanose = 3;
+  }
+
+  else if (resposta9[0].checked == true) {
+    diagnosticos.Danovanose = 1;
   }
 
   else if (resposta7[0].checked == true) {
-    alert("O seu hipotético diagnóstico é: Cancro Mole");
+    diagnosticos.CancroMole = 1;
   }
 
   else if (resposta5[1].checked == true) {
-    alert("O seu hipotético diagnóstico é: HPV");
+    diagnosticos.HPV = 1;
   }
 
   else if (resposta4[0].checked == true) {
-    alert("O seu hipotético diagnóstico é: Tricomeníase");
+    diagnosticos.Tricomeníase = 3;
   }
 
   else if (resposta3[0].checked == true) {
-    alert("O seu hipotético diagnóstico é: Gonorréia");
+    diagnosticos.Gonorréia = 3;
   }
+
 
   else if (resposta2[0].checked == true) {
-    alert("O seu hipotético diagnóstico é: Clamídia");
+    diagnosticos.Clamídia = 3;
   }
 
+  let resposta = Object.keys(diagnosticos).reduce((prev, curr) => diagnosticos[prev] > diagnosticos[curr] ? prev : curr);
+  alert(`O seu hipotético diagnóstico é: ${resposta}!`);
 }
