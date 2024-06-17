@@ -83,4 +83,8 @@ function final() {
 
   let resposta = Object.keys(diagnosticos).reduce((prev, curr) => diagnosticos[prev] > diagnosticos[curr] ? prev : curr);
   alert(`O seu hipotético diagnóstico é: ${resposta}!`);
+
 }
+
+  
+

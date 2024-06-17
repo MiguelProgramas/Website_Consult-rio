@@ -1,9 +1,36 @@
 <h1 class="handle-titulo">Todas as doenças contempladas:</h1>
 <ul id="lista">
-    <li>Clamídia</li>
-    <li>Gonorréia</li>
-    <li>Trícomeníase</li>
-    <li>HPV</li>
-    <li>Cancro Mole</li>
-    <li>Danovanose</li>
+    <button type="button" class="colapso">Clamídia</button>
+    <div class="conteúdo"><p>O agente causador:</p><p>Breve explicação da doença</p><p>Tratamento:</p></div><br>
+    <button type="button" class="colapso">Gonorréia</button>
+        <div class="conteúdo"><p>O agente causador:</p><p>Breve explicação da doença</p><p>Tratamento:</p></div><br>
+    <button type="button" class="colapso">Trícomeníase</button>
+        <div class="conteúdo"><p>O agente causador:</p><p>Breve explicação da doença</p><p>Tratamento:</p></div><br>
+    <button type="button" class="colapso">HPV</button>
+        <div class="conteúdo"><p>O agente causador:</p><p>Breve explicação da doença</p><p>Tratamento:</p></div>
+    <button type="button" class="colapso">Cancro Mole</button>
+        <div class="conteúdo"><p>O agente causador:</p><p>Breve explicação da doença</p><p>Tratamento:</p></div>
+    <button type="button" class="colapso">Danovanose</button>
+        <div class="conteúdo"><p>O agente causador:</p><p>Breve explicação da doença</p><p>Tratamento:</p></div>
 </ul>
+
+<script>
+    var coll = document.getElementsByClassName("colapso");
+  var i;
+
+  for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", 
+      function() {
+        this.classList.toggle("ativo");
+        var content = this.nextElementSibling;
+
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        }
+        else {
+          content.style.display = "block";
+        }
+      }
+    );
+  }
+</script>
