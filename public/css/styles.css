@@ -208,10 +208,15 @@ p {
     background-color: rgb(252, 225, 192);
     padding: 50px;
     border-bottom: 5px solid black;
-    font-size: x-large;
+    font-size: large;
     font-weight: bold;
     transition: .5s;
     color: rgb(255, 255, 255);
     width: auto;
     background-color: rgb(70, 70, 70);
+}
+
+#lista .ativo {
+    font-size: 45px;
+    background-color: #555;
 }

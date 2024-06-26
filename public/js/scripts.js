@@ -52,6 +52,27 @@ function final() {
 
   let diagnosticos = { };
 
+  var validacao = 0;
+
+ if (
+  resposta3[1].checked === true &&
+  resposta4[1].checked === true &&
+  resposta5[1].checked === true &&
+  resposta7[1].checked === true 
+ ) {
+  alert("Parece que você não possui nenhum sintoma. Parabéns!");
+  return true
+ }
+
+  if (
+  resposta3[0].checked === true &&
+  resposta4[0].checked === true &&
+  resposta5[0].checked === true &&
+  resposta7[0].checked === true 
+ ) {
+  validacao++;
+ }
+
   if (resposta9[2].checked == true) {
     diagnosticos.Danovanose = 3;
   }
@@ -81,10 +102,16 @@ function final() {
     diagnosticos.Clamídia = 3;
   }
 
-  let resposta = Object.keys(diagnosticos).reduce((prev, curr) => diagnosticos[prev] > diagnosticos[curr] ? prev : curr);
-  alert(`O seu hipotético diagnóstico é: ${resposta}!`);
+  if (validacao === 0) {
+
+    let resposta = Object.keys(diagnosticos).reduce((prev, curr) => diagnosticos[prev] > diagnosticos[curr] ? prev : curr);
+    alert(`O seu hipotético diagnóstico é: ${resposta}!`);
+
+  }
+
+  if (validacao !== 0) {
+    let resposta = Object.keys(diagnosticos).reduce((prev, curr) => diagnosticos[prev] > diagnosticos[curr] ? prev : curr);
+    alert (`Além de você possuir, na teoria, todos os sintomas possíveis, o seu hipotético diagnóstico é: ${resposta}!`)
+  }
 
 }
-
-  
-
