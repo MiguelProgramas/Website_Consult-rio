@@ -211,12 +211,16 @@ p {
     font-size: large;
     font-weight: bold;
     transition: .5s;
-    color: rgb(255, 255, 255);
+    color: #ffffff;
     width: auto;
     background-color: rgb(70, 70, 70);
 }
 
 #lista .ativo {
     font-size: 45px;
+    background-color: #555;
+}
+
+.saiba {
     background-color: #555;
 }

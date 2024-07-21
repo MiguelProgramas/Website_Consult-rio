@@ -1,17 +1,12 @@
 <h1 class="handle-titulo">Todas as doenças contempladas:</h1>
 <ul id="lista">
-    <button type="button" class="colapso" onclick="apagar()">Clamídia</button>
-        <div class="conteúdo"><p>O agente causador: bactéria Chlamydia trachomatis</p><p>Sintomas diferem, porém sempre existirá dor ao urinar e algum corrimento</p><p>Tratamento: uso de antibióticos receitados segundo a especificidade do caso</p></div><br>
-    <button type="button" class="colapso" onclick="apagar()">Gonorréia</button>
-        <div class="conteúdo"><p>O agente causador: bactéria Neisseria gonorrhoeae</p><p>Sintomas diferem, porém sempre existirá secreção e desconforto físico geral</p><p>Tratamento: uso de antibióticos receitados segundo a especificidade do caso</p></div><br>
-    <button type="button" class="colapso" onclick="apagar()">Tricomoníase</button>
-        <div class="conteúdo"><p>O agente causador: parasita Trichomonas Vaginalis</p><p>Corrimento amarelo; coceira; odor forte; irritação vulvar e dificuldade de urinar</p><p>Tratamento: uso de antibióticos (como metronidazol) e quimioterapia</p></div><br>
-    <button type="button" class="colapso" onclick="apagar()">HPV</button>
-        <div class="conteúdo"><p>O agente causador: Human Papiloma Virus</p><p>Verrugas genitais; prurido; queimação e sangramento</p><p>Tratamento: remoção das verrugas (laser; crioterapia ou cirurgia)</p></div>
-    <button type="button" class="colapso" onclick="apagar()">Cancro Mole</button>
-        <div class="conteúdo"><p>O agente causador: bactéria Haemophilus ducreyi</p><p>Úlcera dolorosa no órgão genital; secreção amarelo-esverdeada</p><p>Tratamento: uso de antibióticos, como azitromicina, ceftriaxona e entre outros...</p></div>
-    <button type="button" class="colapso" onclick="apagar()">Danovanose</button>
-        <div class="conteúdo"><p>O agente causador: bactéria Klebsiella granulomatis</p><p>Inchaço na região genital; presença de caroço ou nódulos; feridas que não doem</p><p>Tratamento: uso de antibióticos receitados segundo a especificidade do caso</p></div>
+
+        {{#each read}}
+    <button type="button" class="colapso" onclick="apagar()">{{this.nome}}</button>
+        <div class="conteúdo"><div class="conjunto"><p>{{this.titulo}}</p></div><p>{{this.sintomas}}</p><p>{{this.tratamento}}</p>
+      </div><br>
+        {{/each}}
+
 </ul>
 
 <script>
