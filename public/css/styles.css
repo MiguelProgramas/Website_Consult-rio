@@ -129,7 +129,7 @@ p {
     margin-top: 3em;
 }
 
-#lista li {
+#lista button{
     list-style: none;
     background-color: rgb(252, 225, 192);
     width: 33%;
@@ -141,7 +141,7 @@ p {
     box-shadow: 10px 10px 10px 10px rgb(0, 0, 0);
 }
 
-#lista li:hover {
+#lista button:hover {
     background-color: rgb(0, 0, 0);
     color: rgb(252, 225, 192);
     box-shadow: 10px 10px 5px white;
@@ -196,4 +196,92 @@ p {
     font-weight: bold;
     font-size: larger;
     box-shadow: 10px 10px 10px red;
+}
+
+.conteúdo {
+    display: none;
+    overflow: hidden;
+}
+
+.conteúdo p {
+    list-style: none;
+    background-color: rgb(252, 225, 192);
+    padding: 50px;
+    border-bottom: 5px solid black;
+    font-size: large;
+    font-weight: bold;
+    transition: .5s;
+    color: #ffffff;
+    width: auto;
+    background-color: rgb(70, 70, 70);
+}
+
+#lista .ativo {
+    font-size: 45px;
+    background-color: #555;
+}
+
+.saiba {
+    background-color: #555;
+}
+
+.saiba input {
+    background:  rgba(85,85,85,1);
+    font-size: xx-large;
+    margin-left: auto;
+    margin-right: auto;
+    width: 150%;
+    font-weight: bold;
+    border: 5px solid white;
+    border-radius: 5px;
+    padding: .5em;
+    cursor: pointer;
+    transition: 2s;
+    color: white;
+}
+
+.saiba input:hover {
+    background: rgba(252,225,192,1);
+    color: black;
+}
+
+#impressao {
+    background-color: white;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}
+
+#impressao h1 {
+    font-weight: normal;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.botao {
+    background-color: white;
+    border-bottom: 5px solid black;
+    font-size: x-large;
+    font-weight: bold;
+    box-shadow: 10px 10px 10px 2px rgb(0, 0, 0);
+    padding: 5px;
+    cursor: pointer;
+}
+
+#but-impressao {
+    display: flex;
+    justify-content: center;
+}
+
+#mensagem-erro {
+    color:red; 
+    font-weight: bold;
+    background-color: rgb(252, 225, 192);
+    padding: 20px;
+    font-size: xx-large;
+}
+
+#container-erro {
+    display: flex;
+    justify-content: center;
 }

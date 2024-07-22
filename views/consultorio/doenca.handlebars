@@ -1,0 +1,21 @@
+{{#if doenca123}}
+<div id="impressao">
+    <div id="texto"><h1 style="font-weight: bold;">Hipotético diagnóstico desenvolvido e encaminhado pelo Website Consultório</h1><br>
+    <h1>Doença: {{doenca123.dataValues.nome}}</h1><br>
+    <h1>{{doenca123.dataValues.titulo}}</h1><br>
+    <h1>{{doenca123.dataValues.sintomas}}</h1><br>
+    <h1>{{doenca123.dataValues.tratamento}}</h1>
+    </div>
+</div><br>
+
+<div id="but-impressao">
+    <button type="button" class="botao" onclick="imprimir()" id="imprimir">Imprima a página aqui!</button>
+</div>
+{{else}}
+    <div id="container-erro">
+    <span id="mensagem-erro">Não existe nenhuma doença com esse id em nosso banco de dados!</span>
+    </div>
+{{/if}}
+
+
+

@@ -1,9 +1,63 @@
 <h1 class="handle-titulo">Todas as doenças contempladas:</h1>
 <ul id="lista">
-    <li>Clamídia</li>
-    <li>Gonorréia</li>
-    <li>Trícomeníase</li>
-    <li>HPV</li>
-    <li>Cancro Mole</li>
-    <li>Danovanose</li>
+
+  {{#each read}}
+  <button type="button" class="colapso" onclick="apagar()">{{this.nome}}</button>
+  <div class="conteúdo">
+    <p>{{this.titulo}}</p>
+    <p>{{this.sintomas}}</p>
+    <p>{{this.tratamento}}</p>
+    <form class="saiba" action="/sistema/doenca" method="POST">
+      <input type="hidden" name="id" value={{this.id}}>
+      <input type="submit" value="Página para impressão aqui!">
+    </form>
+  </div><br>
+  {{/each}}
+
 </ul>
+
+<script>
+
+  var coll = document.getElementsByClassName("colapso");
+  var contador = 0;
+
+  function apagar() {
+    for (let i = 0; i < coll.length; i++) {
+      if (coll[i].classList.contains("ativo")) {
+        contador++;
+      }
+    }
+    if (contador !== 0) {
+      for (let j = 0; j < coll.length; j++) {
+        coll[j].style.display = "block";
+      }
+      contador = 0;
+      return
+    }
+    if (contador === 0) {
+      for (let m = 0; m < coll.length; m++) {
+        coll[m].style.display = "none";
+      }
+      return
+    }
+  }
+
+
+  for (n = 0; n < coll.length; n++) {
+    coll[n].addEventListener("click",
+      function () {
+        this.classList.toggle("ativo");
+        var content = this.nextElementSibling;
+
+        this.style.display = "block";
+
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        }
+        else {
+          content.style.display = "block";
+        }
+      }
+    );
+  }
+</script>
