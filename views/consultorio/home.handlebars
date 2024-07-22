@@ -1,11 +1,18 @@
 <h1 class="handle-titulo">Todas as doenças contempladas:</h1>
 <ul id="lista">
 
-        {{#each read}}
-    <button type="button" class="colapso" onclick="apagar()">{{this.nome}}</button>
-        <div class="conteúdo"><div class="conjunto"><p>{{this.titulo}}</p></div><p>{{this.sintomas}}</p><p>{{this.tratamento}}</p>
-      </div><br>
-        {{/each}}
+  {{#each read}}
+  <button type="button" class="colapso" onclick="apagar()">{{this.nome}}</button>
+  <div class="conteúdo">
+    <p>{{this.titulo}}</p>
+    <p>{{this.sintomas}}</p>
+    <p>{{this.tratamento}}</p>
+    <form class="saiba" action="/sistema/doenca" method="POST">
+      <input type="hidden" name="id" value={{this.id}}>
+      <input type="submit" value="Página para impressão aqui!">
+    </form>
+  </div><br>
+  {{/each}}
 
 </ul>
 
@@ -37,12 +44,12 @@
 
 
   for (n = 0; n < coll.length; n++) {
-    coll[n].addEventListener("click", 
-      function() {
+    coll[n].addEventListener("click",
+      function () {
         this.classList.toggle("ativo");
         var content = this.nextElementSibling;
 
-      this.style.display = "block";
+        this.style.display = "block";
 
         if (content.style.display === "block") {
           content.style.display = "none";

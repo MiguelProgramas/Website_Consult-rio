@@ -32,7 +32,7 @@ app.use(session({ cookie: { maxAge: 60000 },
 app.use(express.json());
 app.use(express.urlencoded({extended:true}))
 
-// Stating the emplate engine
+// Stating the template engine
 app.engine('handlebars', exphbs.engine());
 app.set('view engine', 'handlebars');
 
@@ -42,7 +42,7 @@ app.use(flash());
 // Stating the static path
 app.use(express.static('public'));
 
-// Specifying path
+// Specifying path for routes
 app.use('/sistema', consultorioRotas);
 
 // Initiating homepage

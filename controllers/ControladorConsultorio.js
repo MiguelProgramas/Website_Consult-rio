@@ -85,4 +85,27 @@ module.exports = class ControladorConsultorio {
         return
     }
 
+    static async mostrarDoencaPost(req, res) {
+
+        const id = req.body.id;
+    
+            res.redirect(`doenca/${id}`);
+    
+        }
+    
+    static async mostrarDoenca(req, res) {
+    
+        const id = req.params.id;
+    
+    
+        const doenca123 = await Doenca.findOne({
+            where: {
+                id: id
+            },
+            plain: true,    
+            })
+    
+        res.render('consultorio/doenca', { doenca123 })
+    }
+
 }

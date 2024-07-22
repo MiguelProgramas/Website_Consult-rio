@@ -115,3 +115,15 @@ function final() {
   }
 
 }
+
+function imprimir() {
+
+  let conteudo = document.getElementById("texto");
+  let impressao = window.open('', '', 'left=0,top=0,width=800,height=900,toolbar=0,scrollbars=0,status=0');
+  impressao.document.write(conteudo.innerHTML);
+  impressao.document.close();
+  impressao.focus();
+  impressao.print();
+  impressao.close();
+  
+}
